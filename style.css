@@ -1,0 +1,147 @@
+
+body{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.game-background{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.game-container{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  max-width: 30vw;
+  background-color: rgb(66, 56, 56);
+  padding: 0 2vw;
+  padding-bottom: 2vw;
+}
+
+.game-center-block-button{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border: 0.2vw solid green;
+  padding: 2vw;
+  margin-top: 2vw;
+}
+
+.game-center-block-button .button{
+  display: flex;
+}
+
+.game-center-block-button a,.game-center-block-rolling a{
+  display: flex;
+  color: white;
+  font-size: 1.2vw;
+}
+
+.game-center-block-button a{
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.game-center-block-button a:hover{
+  opacity: 0.6;
+}
+
+.game-center-block-rolling{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#choose-player{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-top: 0;
+  border: 0.2vw solid green;
+  width: 150px;
+  height: 100px; /* Фиксированная высота для контейнера */
+}
+
+#choose-player div {
+    display: none; /* Скрываем элементы пользователя изначально */
+}
+
+#random-item {
+    
+    width: 150px;
+    height: 100px; /* Фиксированная высота для контейнера */
+    overflow: hidden; /* Скрываем всё, что выходит за пределы контейнера */
+    position: relative;
+    text-align: center;
+    border: 0.2vw solid rgb(252, 151, 0);
+    justify-content: center;
+  align-items: center;
+}
+
+#items-container {
+    position: relative;
+    top: 0;
+    width: 100%;
+    transition: top 2s ease-out; /* Плавное движение вниз */
+}
+
+#items-container div {
+    height: 100px; /* Каждый элемент имеет высоту контейнера */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-text-title{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.game-text-title-main{
+  display: flex;
+   color: white;
+   font-size: 2vw;
+}
+
+#win,#tie,#lose{
+  display: none;
+}
+
+#win.show{
+  display: flex;
+  color: rgb(51, 255, 0);
+  animation: scale-anim 2s forwards;
+}
+
+#tie.show{
+  display: flex;
+  color: white;
+  animation: scale-anim 2s forwards;
+}
+
+#lose.show{
+  display: flex;
+  color: red;
+  animation: scale-anim 2s forwards;
+}
+
+@keyframes scale-anim {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(2);
+    }
+}
